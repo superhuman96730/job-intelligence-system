@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Intelligence Dashboard</title>
+</head>
+<body>
+    <h1>Job Intelligence System</h1>
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>Company</th>
+            <th>Title</th>
+            <th>Score</th>
+            <th>Apply</th>
+        </tr>
+        {% for job in jobs %}
+        <tr>
+            <td>{{ job.company }}</td>
+            <td>{{ job.title }}</td>
+            <td>{{ job.match_score }}</td>
+            <td><a href="{{ job.url }}" target="_blank">Apply</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
